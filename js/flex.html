@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .flex {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .L{
+        background-color: aqua;
+    }
+    .col.C{
+         background-color:#F0F;
+         flex-grow: 3;
+    }
+    .R{
+         background-color:#05A;
+    }
+    .col{
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+@media (max-width:760px){
+    .flex{
+        flex-direction: column;
+    }
+    .col{
+        flex-grow: 0;
+        width: 100%;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="flex">
+        <diV class="col L">LL</diV>
+        <diV  class="col C">CC</diV>
+        <diV class="col R">RR</diV>
+    </div>
+    
+</body>
+</html>

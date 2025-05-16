@@ -1,0 +1,62 @@
+h1{
+    color: aqua;
+    }
+
+.main-nav > ul {
+    list-style: none;
+    display: flex;
+    color: brown;
+    background-color: blueviolet;
+padding: 0%;
+margin: 0%;
+gap: 10%;
+justify-content: center;
+}
+.main-nav > ul > li {
+    background-color: blue;
+    width: 50%;
+    text-align: center;
+}
+
+.main-nav > ul a{
+    color: #fff;
+    text-decoration: none;
+    }
+
+
+.main-nav > ul > li>a:hover{
+    color: aqua;
+}
+
+
+ul > li> ul {
+    background-color: aqua;
+   display: none;
+
+}
+
+.ul-class li:hover > a{
+    color:black;
+}
+
+/* 滑鼠過去
+隱藏選單出現 */
+
+li > ul.ul-class{
+    display:none;
+    background-color: cadetblue;
+    position: absolute;
+}
+
+
+ul li:hover > ul.ul-class{
+    display:block;
+    background-color: cadetblue;
+    padding: 0;
+}
+
+/* --- */
+/* --- */
+/* --- */
+/* --- */
+

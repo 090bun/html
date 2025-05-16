@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=LXGW+WenKai+TC&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "LXGW WenKai TC", cursive;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0%;
+            background-color: #f0f0f0;
+        }
+
+        . .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #555;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 50px;
+            position: relative;
+
+
+        }
+
+        /* logo */
+        .logo {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        /*桌機選單*/
+        nav.desktop-meun {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav.desktop-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .menu-toggle {
+            display: none;
+            /*有些瀏覽器不支援在下面打的display none 所以在打一次比較保險*/
+        }
+
+        .hamburger {
+            /* display: flex; 
+            gap: 3px; */
+            /*這邊用flex 做3條線的話 在使用display 會消失掉*/
+            display: none;
+            width: 30px;
+            height: 30px;
+            flex-direction: column;
+            justify-content: space-between;
+            /*平均分布3條線*/
+            cursor: pointer;
+            /*滑鼠過去變成手指的狀態*/
+        }
+
+        /*漢堡選單製作*/
+        .hamburger span {
+            display: block;
+            height: 2px;
+            background-color: #fff;
+            border-radius: 3px;
+        }
+
+        /*選單抽屜*/
+        .mobile-menu {
+            display: flex;
+            position: fixed;
+            top: 0;
+            width: 240px;
+            height: 100%;
+            background-color: rgb(104, 103, 103);
+            padding: 80px 20px;
+            left: -240px;
+            /*東西先放畫面外*/
+            flex-direction: column;
+            gap: 20px;
+            transition: left 0.3 linear;
+            /*CSS動畫效果 從左邊出現 花 0.3小 平滑*/
+            z-index: 1000;
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            /*透明*/
+
+        }
+
+
+        /*背景遮罩*/
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            /*100%參考 父容器*/
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /*可以設定透明度*/
+            z-index: 500;
+            /*這邊設定比選單低*/
+            cursor: pointer;
+        }
+
+        /*手機板手機樣式*/
+        .mobile-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 500;
+            display: block;
+            padding: 10px 0;
+        }
+
+        /*~  在同層級 但不用緊貼著 (緊貼用+)
+        
+    方塊被狗選時顯示選單*/
+        #menu-checkbox:checked~.mobile-menu {
+            left: 0px;
+        }
+
+        #menu-checkbox:checked~.menu-overlay {
+            display: block;
+        }
+
+        #menu-checkbox:checked~header .hamburger {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1010;
+            /*因為上面設定的大小沒有占整個螢幕   這邊讓他在上面就可以了*/
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: 1280px;
+            /*限制寬度*/
+            margin: 0 auto;
+            gap: 1em;
+            padding: 1em;
+            flex-grow: 1;
+        }
+
+        .col {
+            flex-basis: 0;
+            flex-grow: 1;
+        }
+
+
+        .l {
+            background-color: aqua;
+            position: sticky;
+            top: 80px;
+            align-self: flex-start;
+            /*由上而下對其*/
+            height: fit-content;
+            /*根據內容調整高度*/
+        }
+
+        .c {
+            background-color: #F0F;
+            flex-grow: 3;
+            min-height: 400px;
+        }
+
+        .r {
+            background-color: #05A;
+            position: sticky;
+            top: 80px;
+            align-self: flex-start;
+            /*由上而下對其*/
+            height: fit-content;
+            /*根據內容調整高度*/
+        }
+
+        footer {
+            background-color: #555;
+            color: #fff;
+            padding: 16px;
+            text-align: center;
+        }
+
+
+
+        /*手機樣式*/
+        @media (max-width : 768px) {
+            .main-container {
+                flex-direction: column;
+                padding: 12px;
+            }
+
+            /*影藏桌機選單*/
+            nav.desktop-menu {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 手機板漢堡選單觸發元素 -->
+    <input type="checkbox" id="menu-checkbox" class="menu-toggle" hidden />
+    <!-- 手機板選單抽屜背景 -->
+    <div class="menu-overlay"></div>
+
+    <!-- 頁首內容 -->
+    <div class="page-wrapper">
+        <header>
+            <div class="logo">JavaScript class</div>
+            <nav class="desktop-menu">
+                <a href="#">首頁</a>
+                <a href="#">去哪</a>
+                <a href="#">聯絡</a>
+            </nav>
+            <!-- 漢堡外觀 -->
+            <label for="menu-checkbox" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </header>
+
+        <!--主頁面 -->
+        <div class="main-container">
+            <aside class="col l">left</aside>
+            <main class="col c">center</main>
+            <aside class="col r">right</aside>
+        </div>
+        <footer>
+            <p>&copy; 來打看看</p>
+        </footer>
+
+    </div>
+    <!--手機板選單遮罩 -->
+    <nav class="mobile-menu">
+        <label for="menu-checkbox" class="close-menu">&times;</label>
+        <a href="#">首頁</a>
+        <a href="#">去哪</a>
+        <a href="#">聯絡</a>
+    </nav>
+    <!-- 背景遮罩 點擊關閉手機板選單 -->
+    <label for="menu-checkbox" class="menu-overlay"></label>
+
+</body>
+
+</html>
