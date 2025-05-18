@@ -1,0 +1,271 @@
+html {
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:300 ;
+  font-style: normal;
+  background-color: #f6f6f6;
+  list-style: none;
+  font-size: 14px;
+}
+
+body {
+  width: 375px;
+  height: 1300px;
+  position: relative;
+  justify-content: center;
+}
+.all__middle{
+  background-color:#f6f6f6;
+  flex-direction: column;
+  height: 100%;
+  width:auto;
+}
+/* section排版 */
+.page1__div{
+  color: #f6f6f6;
+  flex-direction: column;
+  background-color: #353535;
+  display: flex;
+
+}
+
+.manu__nav{
+  height:70px;
+  width:100%;
+  background-color:rgba(0,0,0,1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 24px;
+  letter-spacing:1px;
+}
+.manu__henberger{
+  background-color: #d9d9d9;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+
+.manu__nav li:nth-child(n+2):nth-child(-n+4) {
+  display: none;
+}
+/*點點*/
+.point_section{
+  position: absolute;
+  top: 86px;
+  left: -180px;
+  width: auto;
+  height: 250px;
+  opacity: 0.25;
+  z-index: 0;
+}
+.section__div{
+  background-color: #d8d8d8;
+  position: relative;
+  width: 100%;
+  height: 470px;
+}
+/* 文字排版 */
+section{
+  height: 141px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  top: 330px;
+  }
+section > div{
+  font-size: 40px;
+  display: flex;
+  margin-bottom:5px;
+  letter-spacing :0.18em;
+}
+.p2{
+  font-size: 32px;
+  margin-right: -5px;
+  margin-top: 9px;
+}
+.yellow__box__div{
+  font-size: 16px;
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+}
+.yellow__box{
+  background-color: #EEFF00;
+  width: 217px;
+  height: 16px;
+  color: #030303;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  margin-left: 0px;
+}
+.yellow__box p{
+  display: flex;
+  margin-left: 5px;
+  letter-spacing :1.4em;
+  white-space: nowrap
+  
+}
+.yellow__box__div .mail{  
+  letter-spacing :0.14em;
+  margin-left:4px;
+}
+/* section排版 */ 
+/* e    n    d */
+/* section排版 */
+
+.photo{
+  width: 217px;
+  height: auto;
+  position: absolute;
+  top: 190px;
+  margin: 0 79px;
+  z-index: 1;
+}
+.photo__bg{
+  background-color:#828282;
+  width: 217px;
+  height: 284.188px;
+  position: absolute;
+  top: 170px;
+  left: -20px;
+  margin: 0 79px;
+}
+.work__div{
+  color: #030303;
+  position: relative;
+  margin-top:140px ;
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing:1px;
+}
+
+.work__word{
+  font-size: 24px;
+  position: absolute;
+  letter-spacing:1px;
+  top: -60px;  
+}
+
+.jods{
+  font-size: 12px;
+  display:flex;
+  gap: 15px;
+  color: #353535;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.jods> li:nth-child(odd) {
+  margin-left:15px ;
+  letter-spacing :0.6em;
+}
+.jods> li:nth-child(2) {
+  margin-left:68px ;
+  letter-spacing :4.5em;
+}
+.jods> li:nth-child(4) {
+  margin-left:15px ;
+  letter-spacing :0.46em;
+}
+.jods> li:nth-child(6) {
+  margin-left:16px ;
+  letter-spacing :0.35em;
+}
+.jods> li:nth-child(8) {
+  margin-left:15px ;
+  letter-spacing :0.24em;
+}
+
+.skill__div{
+  color: #030303;
+  position: relative;
+  margin-top:140px ;
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing:1px;
+    margin-bottom: 50px;
+  
+}
+
+.skill__word{
+  font-size: 24px;
+  position: absolute;
+  letter-spacing:1px;
+  top: -60px; 
+  margin-bottom: 30px; 
+} 
+/* 
+.point_skill{
+  position: absolute;
+  right: 70px;
+  width: auto;
+  height: 200px;
+  opacity: 0.25;
+} */
+
+.skill__word__ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100px;
+  gap: 20px;
+  margin: 0px 56px;
+}
+
+
+.skill__word__ul li{
+  border-radius: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+} 
+.skill__word__ul li img{
+  width: 40px;
+  height: 40px;
+}
+
+footer {
+  background-color: #030303;
+  position: absolute;
+  bottom: 0%;
+  font-size: 12px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+} 
+footer ul{
+  color: #f6f6f6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  z-index: 1;
+}
+
