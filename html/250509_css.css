@@ -6,6 +6,10 @@
   .mobile-only {
     display:none;
   }
+  a{
+  color: #f6f6f6;
+  text-decoration: none;
+  }
 
 html {
   box-sizing: border-box;
