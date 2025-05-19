@@ -132,19 +132,26 @@
 <!--手機版-->
 <!--手機版-->
 <!--手機版-->
+<!-- 手機板漢堡選單觸發元素 -->
+<input type="checkbox" id="menu-checkbox" class="menu-toggle" hidden />
+<!-- 手機板選單抽屜背景 -->
+<div class="menu-overlay"></div>
 <div class="mobile-only">
 <!-- 版面整體至中位置 -->
-    <div class="all__middle">
-    <!-- <a id="top"></a>
-    <div class="top"><a href="#top" class="back-to-top"><img src="img/ipei.png" alt="top"></a> </div> -->
-    <div class="manu__henberger"></div>    
+
     <div class="page1__div">
         <nav class="manu__nav">
             <li>portfolio</li>
-            <li>about</li>
-            <li>work</li>
-            <li>skill</li>    
         </nav>
+        
+    <!-- 漢堡外觀 -->
+            <label for="menu-checkbox" class="henberger">
+                <span> </span>
+                <span> </span>
+                <span> </span>
+            </label>
+    <!-- 背景遮罩 點擊關閉手機板選單 -->
+            
         <!-- 文字排版 -->
         <img src="/img/point.png" class="point_section"/>
         <div class="section__div">
@@ -164,6 +171,18 @@
             <div class="section_img_bg"></div>
         </div>
     </div>
+    <!--手機板選單遮罩 -->
+    
+    <label for="menu-checkbox" class="close-menu">&times;</label>
+    <nav for="menu-checkbox" class="mobile-menu">
+        <!-- X 的設定 -->
+        <a href="#">about</a>
+        <a href="#">work</a>
+        <a href="#">skill</a>
+    </nav>
+
+
+
     <!-- 介紹 -->
     <div class="about__div__flrx">
     <div class="about__div">
@@ -180,7 +199,9 @@
         <li>適合預覽大小 375*667</li>
     </ul>
 </footer>
-</div>
+ <!-- 背景遮罩 點擊關閉手機板選單 -->
+    <label for="menu-checkbox" class="menu-overlay"></label>
+
 
 
 </div>
