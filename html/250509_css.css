@@ -51,7 +51,6 @@ body {
   align-items: center;
   font-size: 24px;
   letter-spacing:1px;
-  position: absolute;
 }
 /* 文字排版 */
 .point_section{
@@ -517,7 +516,7 @@ nav.desktop-menu a {
   left: 0px;
 }
 
-#menu-checkbox:checked~.menu-overlay {
+#menu-checkbox:checked~.mobile-only .menu-overlay {
     display: block;
 }
 #menu-checkbox:checked~.mobile-only .close-menu{
