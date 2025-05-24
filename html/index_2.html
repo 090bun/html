@@ -22,9 +22,9 @@
         <div class="page1__div">
             <nav class="manu__nav">
                     <a ><li>portfolio</li></a>
-                    <a href="#about"><li>about</li></a>
-                    <a href="#work" ><li>experience</li></a>
-                    <a href="#skill" ><li>skill</li> </a>
+                    <a href="#about" id="hold_about"><li>about</li></a>
+                    <a href="#work" id="hold_work"><li>experience</li></a>
+                    <a href="#skill" id="hold_skill"><li>skill</li> </a>
             </nav>
             <!-- 文字排版 -->
             <img src="/img/point.png" class="point_section"/>
@@ -138,7 +138,7 @@
 <div class="menu-overlay"></div>
 <div class="mobile-only">
 <!-- 版面整體至中位置 -->
-    <div class="page1__div" id="#M_about">
+    <div class="page1__div" id="M_about">
         <nav class="manu__nav">
             <li>portfolio</li>
         </nav>
@@ -172,16 +172,18 @@
     <label for="menu-checkbox" class="close-menu">&times;</label>
     <nav for="menu-checkbox" class="mobile-menu">
         <!-- X 的設定 -->
-                    <a href="index.html"><li>home</li></a>
-                <li><a href="#M_work" ><label for="menu-checkbox"></label>experience</a></li>
-                <li><a href="#M_skill" ><label for="menu-checkbox"></label>skill</a></li>
+                <a href="index.html" id="hold_M_home" >home</a>
+                <a href="#M_work"  id="hold_M_work">experience</a>
+                <a href="#M_skill"  id="hold_M_skill">skill</a>
     </nav>
+
+
 
     <!-- 介紹 -->
     <div class="about__div">
         <!-- 照片 -->
         <div class="container">  
-        <div><img src="/img/point.png" class="point_section"/></div>
+        <div></div><img src="/img/point.png" class="point_section"/>
         </div>
         <!-- <img src="/img/point.png" class="point"/> -->
         <div>   

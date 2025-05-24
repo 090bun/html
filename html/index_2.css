@@ -53,6 +53,10 @@ body {
   font-size: 24px;
   letter-spacing:1px;
 }
+.manu__nav a{
+  padding:30px 150px;
+  text-align: center;
+}
 /* 文字排版 */
 .point_section{
   position: absolute;
@@ -459,6 +463,7 @@ nav.desktop-menu a {
   margin: 6px 0;
 }
 
+
 /*選單抽屜*/
 .mobile-menu {
   display: flex;
@@ -472,8 +477,8 @@ nav.desktop-menu a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  transition: left 0.3 linear;
+  gap: 50px;
+  transition: top 0.5s linear;
   /*CSS動畫效果 從左邊出現 花 0.3小 平滑*/
   z-index: 5;
   cursor: pointer;
@@ -485,8 +490,11 @@ nav.desktop-menu a {
   text-decoration: none;
   font-size: 1.2em;
   font-weight: 500;
-  display: block;
-  padding: 10px 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .close-menu {  
@@ -503,10 +511,6 @@ nav.desktop-menu a {
   position: absolute;
   z-index: 1;
 } 
-
-.mobile-menu a {
-  padding: 25px 50px;
-}
 
 
 /*背景遮罩*/
@@ -545,11 +549,12 @@ nav.desktop-menu a {
 }
 
 
+
 /*點點*/
 .point_section{
   position: absolute;
   top: 456px;
-  left:-130px;
+left: -130px;
   width: auto;
   height: 200px;
   opacity: 0.25;
@@ -633,8 +638,6 @@ section > div{
 /* section排版 */ 
 /* e    n    d */
 /* section排版 */
-
-
 .about__div div{
 display: flex;
 justify-content: center;
@@ -790,5 +793,15 @@ footer ul{
   gap: 50px;
   z-index: 1;
 }
+
+}
+
+
+.hold {
+background-color: #353535;
+display: flex;
+justify-content: center;
+align-items: center;
+padding:30px 150px;
 
 }
