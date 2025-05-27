@@ -48,3 +48,15 @@ mobileItems.forEach(id => {
     });
   }
 });
+
+
+  function updateProgress(bar) {
+    const value = bar.getAttribute('aria-valuenow');
+    bar.style.width = value + '%';
+  }
+
+  // 等 1 秒後跑每個 progress-bar
+  setTimeout(() => {
+    const bars = document.querySelectorAll('.progress-bar');
+    bars.forEach(bar => updateProgress(bar));
+  }, 1000);

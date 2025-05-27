@@ -42,10 +42,11 @@ body {
   flex-direction: column;
   background-color: #353535;
 }
-.manu__nav{
+.manu__nav {
   height:70px;
   width:100%;
   background-color:rgba(0,0,0,0.25);
+  color: #f6f6f6;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -53,11 +54,13 @@ body {
   letter-spacing:1px;
 }
 .manu__nav a{
-  padding:30px 150px;
+  padding:30px 50px;
   text-align: center;
+  
 }
 /* 文字排版 */
 .point_section{
+  
   position: absolute;
   top: 150px;
   left: 0px;
@@ -66,6 +69,7 @@ body {
   opacity: 0.25;
 }
 .section__div {
+  color: #f6f6f6;
   position: relative;
   height: 1010px;
 } 
@@ -330,6 +334,21 @@ letter-spacing:1px;
   justify-content: center;
   align-items: center;
 } 
+.skill__word__ul li .progress {
+  width: 100%;
+  height: 4px;
+  background-color: #d9d9d9;
+  margin-top: 5px;
+   overflow: hidden;
+}
+
+.skill__word__ul li .progress-bar {
+  background-color:#686868; /* 進度條顏色 */
+    transition: width 1s ease-in-out; /* 讓它慢慢滑動 */
+  text-align: center;
+  height: 100%;
+}
+
 footer {
   background-color: #030303;
   position: absolute;
@@ -481,7 +500,7 @@ nav.desktop-menu a {
   font-size: 1.2em;
   font-weight: 500;
   height: 60px;
-  width: 100%;
+  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
